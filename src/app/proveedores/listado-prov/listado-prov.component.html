@@ -1,0 +1,27 @@
+<div class="col-md-12">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"> <a routerLink="/inicio">Inicio</a></li>
+      <li class="breadcrumb-item"> <a routerLink="/compras">Compras</a></li>
+      <li class="breadcrumb-item" aria-current="page">Proveedores</li>
+    </ol>
+  </nav>
+</div>
+<div class="col-md-12 titulo">
+  <span>Proveedores</span>
+  <button class="btn btn-primary" routerLink="/crear-proveedor">+</button>
+</div>
+<div class="col-md-12">
+  <table class="table table-bordered table-stripped">
+      <tr>
+        <th>Nombre</th>
+        <th>CIF</th>
+        <th>Localidad</th>
+      </tr>
+      <tr *ngFor="let proveedor of proveedores">
+        <td>{{proveedor.nombre}}</td>
+        <td>{{proveedor.cif}}</td>
+        <td>{{proveedor.localidad}}</td>
+      </tr>
+  </table>
+</div>
